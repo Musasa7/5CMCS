@@ -1,0 +1,35 @@
+﻿<Window x:Class="_5CMCS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="5CMCS — Prototype" Height="600" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource DefaultBg}">
+    <DockPanel>
+        <!-- Header -->
+        <Border DockPanel.Dock="Top" Height="64" Background="Black">
+            <Grid Margin="16,0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="" FontFamily="Segoe MDL2 Assets" Foreground="White" FontSize="18" Margin="0,0,8,0"/>
+                    <TextBlock Text="5CMCS" Foreground="White" FontSize="20" FontWeight="Bold"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Sidebar -->
+        <Border DockPanel.Dock="Left" Width="220" Background="{StaticResource SurfaceAlt}" BorderBrush="Black" BorderThickness="0,0,1,0">
+            <StackPanel Margin="12">
+                <TextBlock Text="Navigation" FontWeight="Bold" Margin="4,8,4,8"/>
+                <Button Content="Dashboard" Click="GoDashboard"/>
+                <Button Content="Submit Claim" Click="GoSubmit"/>
+                <Button Content="Upload Documents" Click="GoUpload"/>
+                <Button Content="Approvals" Click="GoApprovals"/>
+                <Button Content="Status Tracker" Click="GoStatus"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Content -->
+        <Border Margin="16" Background="{StaticResource Surface}" CornerRadius="12">
+            <ContentControl x:Name="ContentHost" Margin="16"/>
+        </Border>
+    </DockPanel>
+</Window>
