@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="_5CMCS.Views.DashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel>
+        <TextBlock Text="Welcome to 5CMCS" Style="{StaticResource TitleText}" Margin="0,0,0,6"/>
+        <TextBlock Text="Quick actions" Style="{StaticResource SubtleText}" Margin="0,0,0,12"/>
+
+        <!-- Only three big action buttons -->
+        <UniformGrid Columns="3" Rows="1">
+            <Border Style="{StaticResource Card}" Margin="0,0,12,0" Height="100">
+                <StackPanel Margin="14">
+                    <TextBlock Text="Submit Claim" FontWeight="Bold" FontSize="16"/>
+           
+                    
+                   <Button Content="Go to Submit" Style="{StaticResource BtnPrimary}" Width="140" Click="GoSubmit_Click"/>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource Card}" Margin="0,0,12,0" Height="100">
+                <StackPanel Margin="14">
+                    <TextBlock Text="Upload Documents" FontWeight="Bold" FontSize="16"/>
+                   
+                    <Button Content="Go to Uploads" Style="{StaticResource BtnOutline}" Width="100" Click="GoUpload_Click"/>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource Card}" Height="100">
+                <StackPanel Margin="14">
+                    <TextBlock Text="Track Claim Status" FontWeight="Bold" FontSize="16"/>
+                    
+                    <Button Content="Go to Status" Style="{StaticResource BtnGhost}" Width="100" Click="GoStatus_Click"/>
+                </StackPanel>
+            </Border>
+        </UniformGrid>
+    </StackPanel>
+</UserControl>
